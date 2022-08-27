@@ -1,0 +1,8 @@
+<h1><%= @comment.title%></h1>
+<div>
+    <%= @comment.body %>
+</div>
+<br>
+<%= link_to "Edit Post", edit_comment_path(@comment) %>
+
+<%= link_to "Delete Post", comment_path(@comment), method: :delete, data: {Confirm: "Are you sure?"}  %>

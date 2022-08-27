@@ -1,0 +1,10 @@
+<% @articles.each do |article| %>
+<h2> <%= article.title %> </h2>
+<div><%= truncate(article.body, :length => 35)%><br>
+<%= link_to "Read Post", admin_article_path(article) %>
+<hr>
+
+</div>
+<br>
+
+<% end %>

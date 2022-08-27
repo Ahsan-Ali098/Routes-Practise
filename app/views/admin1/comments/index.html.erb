@@ -1,0 +1,10 @@
+<% @comments.each do |comment| %>
+<h2> <%= comment.title %> </h2>
+<div><%= truncate(comment.body, :length => 35)%><br>
+<%= link_to "Read Post", comment_path(comment) %>
+<hr>
+
+</div>
+<br>
+
+<% end %>
